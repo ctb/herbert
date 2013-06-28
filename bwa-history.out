@@ -1,0 +1,8 @@
+   47  wget -O bwa-0.7.5.tar.bz2 http://sourceforge.net/projects/bio-bwa/files/bwa-0.7.5a.tar.bz2/download
+   51  tar xjvf bwa-0.7.5.tar.bz2 
+   53  cd bwa-0.7.5a/
+   56  cp bwa /usr/local/bin
+   76  bwa index dn.21.fa
+   82  bwa aln dn.21.fa short.fq.1 > short.fq.1.sai
+   83  bwa aln dn.21.fa short.fq.2 > short.fq.2.sai
+   84  bwa sampe dn.21.fa short.fq.1.sai short.fq.2.sai short.fq.1 short.fq.2 > short_bwa.sam
